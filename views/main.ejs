@@ -1,0 +1,42 @@
+<%include ./temp/header2%>
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <form class="ui form" action="/main" method="POST">
+        <div class="field">
+          <div class="ui huge header">Name</div>
+          <div class="ui medium header"><%-found.name%></div>
+        </div>
+        <div class="field">
+          <label class="ui huge header">Email</label>
+          <div class="ui medium header"><%-found.mail%></div>
+        </div>
+        <div class="field">
+          <label class="ui huge header">Balance</label>
+          <div class="ui medium header">Rs.<%-found.balance%></div>
+        </div>
+
+      </form>
+    </div>
+    <div class="middle aligned column">
+      <form action="/main/transfer/<%=found._id%>" method="POST">
+      <button class="ui big blue button">
+        <i class="signup icon"></i>
+        Transfer Fund
+      </button>
+      </form>
+    </div>
+    <div class="middle aligned column">
+      <form action="/main/recharge" method="POST">
+      <button class="ui big red button">
+        <i class="signup icon"></i>
+        Recharge
+      </button>
+      </form>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    TO
+  </div>
+</div>
+<%include ./temp/footer%>

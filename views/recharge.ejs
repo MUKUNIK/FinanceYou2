@@ -1,0 +1,19 @@
+<%include ./temp/header2%>
+<form class="ui segment inverted three container form" action="/main/recharge/new" method="POST">
+  <div class="field">
+    <label>Email</label>
+    <input type="email" name="recharge[mail]" placeholder="Email" required>
+  </div>
+  <div class="field">
+    <label>Amount</label>
+    <input type="text" name="recharge[amount]" placeholder="Amount" required>
+  </div>
+  <div class="field">
+    <div class="ui checkbox">
+      <input type="checkbox" tabindex="0"  required>
+      <label>I agree to the Terms and Conditions</label>
+    </div>
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>
+<%include ./temp/footer%>

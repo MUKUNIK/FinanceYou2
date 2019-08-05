@@ -1,0 +1,29 @@
+<%include ./temp/header2%>
+<div class="ui main text container">
+    <div class="ui top attached segment" >
+      <div class="ui divided items" >
+        <%needy.forEach(function(blog){%>
+<div class="item">
+  <div class="image">
+    <img src="<%=needy.image%>">
+  </div>
+  <div class="content">
+    <h2><%=blog.title%></h2>
+    <div class="meta">
+    <span><%=needy.created.toDateString()%></span>
+  </div>
+  <div class="description">
+  <p><%-needy.body.substring(0, 100)%>...</p>
+  </div>
+<h3 id= "inline"><%=needy.category%>    </h3>
+  <div class="extra" id="inline">
+     <a class="ui floated basic button" href="/blogs/login">READ</a>
+  </div>
+  </div>
+</div>
+<%})%>
+      </div>
+    </div>
+</div>
+
+<%include ./temp/footer%>
